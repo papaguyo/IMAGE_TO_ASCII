@@ -11,19 +11,24 @@ import java.util.stream.Stream;
 public class Shell {
 
     private static final int MIN_PIXELS_PER_CHAR = 2;
-    private final Image img_;
     private static final String CMD_EXIT = "exit";
-    private final Set<Character> charSet = new HashSet<>();
     private static final int INITIAL_CHARS_IN_ROW = 64;
-    private final int minCharsInRow;
-    private final int maxCharsInRow;
-    private int charsInRow;
     private static final String FONT_NAME = "Courier New";
     private static final String OUTPUT_FILENAME = "out.html";
-    private final BrightnessImgCharMatcher charMatcher;
-    private boolean consoleOutput;
-    private final AsciiOutput output;
+    private static final int INITIAL_CHARS_IN_ROW = 64;
     private static final String INITIAL_CHARS_RANGE = "0-9";
+    
+    private final Image img_;
+    private final Set<Character> charSet = new HashSet<>();
+    private final int minCharsInRow;
+    private final int maxCharsInRow;
+    private final BrightnessImgCharMatcher charMatcher;
+    private final AsciiOutput output;
+    
+    private int charsInRow;
+    private boolean consoleOutput;
+    
+    
 
 
     /**
